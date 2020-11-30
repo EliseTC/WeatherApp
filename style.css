@@ -1,0 +1,109 @@
+h1 {
+  color: #434d56;
+  text-align: center;
+  padding: 20px;
+  font-family: font-family "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h2 {
+  color: #434d56;
+  text-align: center;
+  padding: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h5 {
+  color: #434d56;
+  text-align: center;
+  line-height: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h6 {
+  color: #434d56;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+p {
+  color: #434d56;
+  text-align: center;
+  padding: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: #434d56;
+  text-decoration: none;
+}
+
+button {
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #e7debd;
+  border-color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: #434d56;
+}
+
+.container {
+  padding: 20px;
+  margin: auto;
+  border: 20px;
+  border-radius: 10px;
+  max-width: 95%;
+  display: block;
+  background-color: lightcyan;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/533/original/cloudysunny.jpg?1605460762);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.searchCity {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+.celsiusOrFahrenheit {
+  padding: 20px;
+  font-size: 20px;
+  color: #434d56;
+  text-align: left;
+  font-weight: bold;
+}
+
+.geoLocation {
+  padding: 20px;
+  font-size: 20px;
+  color: #434d56;
+  text-align: left;
+}
+
+.card {
+  padding: 1px;
+  margin: 4.3px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.card:hover {
+  background: rgba(231, 222, 189, 0.8);
+}
+
+.col-2 {
+  padding: 1px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.col-2:hover {
+  background: rgba(231, 222, 189, 0.8);
+}
