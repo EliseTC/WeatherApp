@@ -41,6 +41,11 @@ a {
   text-decoration: none;
 }
 
+footer {
+  color: #434d56;
+  padding: 0px 40px;
+  font-weight: bold;
+}
 button {
   color: white;
   text-decoration: none;
@@ -51,6 +56,10 @@ button {
 a:hover {
   text-decoration: none;
   color: #434d56;
+}
+
+a .footer {
+  text-decoration: underline;
 }
 
 .container {
