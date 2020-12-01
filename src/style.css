@@ -58,16 +58,11 @@ a:hover {
   color: #434d56;
 }
 
-a .footer {
-  text-decoration: underline;
-}
-
 .container {
   padding: 20px;
   margin: auto;
   border: 20px;
   border-radius: 10px;
-  max-width: 95%;
   display: block;
   background-color: lightcyan;
   background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/533/original/cloudysunny.jpg?1605460762);
