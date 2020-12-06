@@ -16,16 +16,11 @@ h2 {
 h5 {
   color: #434d56;
   text-align: center;
-  line-height: 40px;
+  margin: 20px;
+  padding: 10px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-h6 {
-  color: #434d56;
-  text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
 }
 
 p {
@@ -124,6 +119,10 @@ a:hover {
   text-transform: capitalize;
 }
 
+.smallIcons {
+  display: block;
+  margin: auto;
+}
 #celsius {
   font-size: 12px;
   color: #434d56;
