@@ -2,38 +2,35 @@ h1 {
   color: #434d56;
   text-align: center;
   padding: 20px;
-  font-family: font-family "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family:font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 h2 {
   color: #434d56;
   text-align: center;
   padding: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h5 {
   color: #434d56;
   text-align: center;
   line-height: 40px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h6 {
   color: #434d56;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 p {
   color: #434d56;
   text-align: center;
   padding: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 a {
@@ -41,24 +38,23 @@ a {
   text-decoration: none;
 }
 
-footer {
-  color: #434d56;
-  padding: 0px 40px;
-  font-weight: bold;
-  text-align: center;
-}
 button {
-  color: white;
+  color:white;
   text-decoration: none;
   border-radius: 10px;
-  background-color: #e7debd;
+  background-color: #E7DEBD;
   border-color: white;
 }
+
+footer {
+  text-align: center;
+}
+
 a:hover {
   text-decoration: none;
   color: #434d56;
-}
-
+ }
+ 
 .container {
   padding: 20px;
   margin: auto;
@@ -80,7 +76,7 @@ a:hover {
 .celsiusOrFahrenheit {
   padding: 20px;
   font-size: 20px;
-  color: #434d56;
+  color: white;
   text-align: left;
   font-weight: bold;
 }
@@ -111,4 +107,18 @@ a:hover {
 
 .col-2:hover {
   background: rgba(231, 222, 189, 0.8);
+}
+
+#celsius {
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+#fahrenheit {
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  font-weight: bold;
 }
