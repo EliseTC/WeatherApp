@@ -32,8 +32,14 @@ function showTemperature(response) {
   let city = response.data.name;
   let h2City = document.querySelector("#card-city");
   h2City.innerHTML = city;
-  let h2Temp = document.querySelector("#card-temperature");
-  h2Temp.innerHTML = temperature + "°C";
+  let h2Temp = document.querySelector(".temperaturevalue");
+  h2Temp.innerHTML = temperature;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML= response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML= Math.round(response.data.wind.speed);
+
+  celsiusTemperature= response.data.main.temp;
 }
 function citySearch (event) {
   event.preventDefault ();
@@ -63,3 +69,27 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector(".currentLocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+//FAHRENHEIT CELSIUS
+let celsiusTemperature=null
+
+function changeToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
+  let newTempFahrenheit= document.querySelector (".temperaturevalue");
+  newTempFahrenheit.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeToFahrenheit);
+
+function changeToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement= document.querySelector (".temperaturevalue");
+   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeToCelsius);
+
+
