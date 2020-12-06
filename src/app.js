@@ -88,7 +88,6 @@ function citySearch (event) {
 
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${citySearchInput.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
-
 }
 
 let form = document.querySelector("#find-city");
@@ -99,6 +98,9 @@ function searchLocation(position) {
   let apiKey = "b19a3f432de5f615851032aa1c827b12";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 
