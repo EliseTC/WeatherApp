@@ -71,7 +71,7 @@ function displayForecast (response){
   <div class="col-2">
                 <h5>${formatHours(forecast.dt * 1000)}</h5>
                 <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" ; id="icon" ; class="smallIcons" />
-                <h5><strong>${Math.round(forecast.main.temp_max)}°</strong>|${Math.round(forecast.main.temp_min)}°</h5>
+                <h5><span class="forecastMax">${Math.round(forecast.main.temp_max)}</span>° | <span class="forecastMin">${Math.round(forecast.main.temp_min)}</span>°</h5>
             </div>
   `;
 }
@@ -118,6 +118,14 @@ function changeToFahrenheit(event) {
   let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
   let newTempFahrenheit= document.querySelector (".temperaturevalue");
   newTempFahrenheit.innerHTML = Math.round(fahrenheitTemperature);
+  
+  let forecastFahrenheitMax = (celsiusTemperature*9)/5+32;
+  let fahrenheitForecastMax = document.querySelector(".forecastMax");
+  fahrenheitForecastMax.innerHTML = Math.round (forecastFahrenheitMax);
+  
+  let forecastFahrenheitMin = (celsiusTemperature*9)/5+32;
+  let fahrenheitForecastMin = document.querySelector (".forecastMin");
+  fahrenheitForecastMin.innerHTML = Math.round (forecastFahrenheitMin);
 }
 
 let fahrenheit = document.querySelector("#fahrenheit");
@@ -127,6 +135,12 @@ function changeToCelsius(event) {
   event.preventDefault();
   let temperatureElement= document.querySelector (".temperaturevalue");
    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+  let celsiusForecastMax = document.querySelector(".forecastMax");
+  celsiusForecastMax.innerHTML = Math.round (celsiusTemperature);
+
+   let celsiusForecastMin = document.querySelector(".forecastMin");
+  celsiusForecastMin.innerHTML = Math.round (celsiusTemperature);
 }
 
 let celsius = document.querySelector("#celsius");
