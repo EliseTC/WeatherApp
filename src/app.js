@@ -160,3 +160,11 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", changeToCelsius);
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", changeToFahrenheit);
+
+//BACKGROUND
+let background = document.querySelector(".container");
+let iconElement = response.data.weather[0].main.toLowerCase();if(iconElement === "clear") {
+  background.setAttribute("src", `sunny.jpg`);
+} else if(iconElement === "light rain") {
+  background.setAttribute("src", "rainy.jpg");
+}
