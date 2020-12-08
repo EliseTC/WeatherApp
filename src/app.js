@@ -117,35 +117,46 @@ let celsiusTemperature=null
 
 function changeToFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
-  let newTempFahrenheit= document.querySelector (".temperaturevalue");
-  newTempFahrenheit.innerHTML = Math.round(fahrenheitTemperature);
-  
-  let forecastFahrenheitMax = (celsiusTemperature*9)/5+32;
-  let fahrenheitForecastMax = document.querySelector(".forecastMax");
-  fahrenheitForecastMax.innerHTML = Math.round (forecastFahrenheitMax);
-  
-  let forecastFahrenheitMin = (celsiusTemperature*9)/5+32;
-  let fahrenheitForecastMin = document.querySelector (".forecastMin");
-  fahrenheitForecastMin.innerHTML = Math.round (forecastFahrenheitMin);
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let newTempFahrenheit = document.querySelector(".temperaturevalue");
+  newTempFahrenheit.innerHTML = Math.round(fahrenheitTemperature); 
+
+  let fahrenheitForecastMax = document.querySelectorAll(".forecastMax");  fahrenheitForecastMax.forEach(function (item) {
+  let currentTemp = item.innerHTML;    
+  item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
+  let fahrenheitForecastMin = document.querySelectorAll(".forecastMin");  fahrenheitForecastMin.forEach(function (item) {
+  let currentTemp = item.innerHTML;    
+  item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
+celsius.addEventListener("click", changeToCelsius);
+fahrenheit.removeEventListener("click", changeToFahrenheit);
 }
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", changeToFahrenheit);
 
 function changeToCelsius(event) {
   event.preventDefault();
-  let temperatureElement= document.querySelector (".temperaturevalue");
-   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  let temperatureElement = document.querySelector(".temperaturevalue");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);  
+  let celsiusForecastMax = document.querySelectorAll(".forecastMax");  
+  celsiusForecastMax.forEach(function (item) {
+  let currentTemp = item.innerHTML; 
+  item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
+  
+  let celsiusForecastMin = document.querySelectorAll(".forecastMin");  celsiusForecastMin.forEach(function (item) {
+  let currentTemp = item.innerHTML;    
+  item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  }); 
 
-  let celsiusForecastMax = document.querySelector(".forecastMax");
-  celsiusForecastMax.innerHTML = Math.round (celsiusTemperature);
-
-   let celsiusForecastMin = document.querySelector(".forecastMin");
-  celsiusForecastMin.innerHTML = Math.round (celsiusTemperature);
+  celsius.removeEventListener("click", changeToCelsius);
+  fahrenheit.addEventListener("click", changeToFahrenheit);
 }
+
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", changeToCelsius);
-
-
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeToFahrenheit);
